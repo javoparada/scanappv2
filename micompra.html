@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ScanApp - Mi compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/scanapp.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body class="entrega micompra">
+    <header class="navbar" data-includeHTML="static/header-interno.html"></header>
+    <main class="container-fluid main-container">
+        <div class="row bg-white">
+            <div class="col">
+                <h1>Mi compra</h1>
+                <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="qr-tab" data-toggle="tab" href="#qr" role="tab" aria-controls="qr" aria-selected="true">Código Qr</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="envio-tab" data-toggle="tab" href="#envio" role="tab" aria-controls="envio" aria-selected="false">Estado de Envío</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="qr" role="tabpanel" aria-labelledby="qr-tab">
+                      <div class="text-center codigo-container">
+                          <p>Válido por Única Vez (13/11/2019)</p>
+                          <p>Acércate a la caja “ScanApp”, con el siguiente código y pagá tu compra en efectivo:</p>
+                          <img src="images/qr.png" class="mx-auto d-block" alt="codigo qr">
+                          <a href="#" class="black text-decoration">Ver Ticket de Compra</a>
+                          
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="envio" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="mapa" aria-label="Su pedido esta en camino a 2 kilometros"></div>
+                        <div class="step-entrega">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="pasos rounded-circle">
+                                        <div class="rounded-circle"></div>
+                                    </div>
+                                    <p>Estamos Preparando tu Compra.</p>
+                                </li>
+                                <li aria-current="step">
+                                    <div class="pasos rounded-circle active">
+                                        <div class="rounded-circle"></div>
+                                    </div>
+                                    <p>¡Tu Compra está en Camino!</p>
+                                </li>
+                                <li>
+                                    <div class="pasos rounded-circle">
+                                        <div class="rounded-circle"></div>
+                                    </div>
+                                    <p>Compra Recibida.</p>
+                                </li>
+                                <div class="linea"></div>
+                            </ul>
+                        </div>
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col horario align-self-center">
+                                      <h4 class="text-uppercase">HORARIO ESTIMADO</h4>
+                                      <span class="font-weight-bold precio_final">17:45</span>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="top-shadow"data-includeHTML="static/footer.html"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/scanapp.js"></script>
+</html>

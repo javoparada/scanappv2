@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ScanApp - Producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/scanapp.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <header class="navbar" data-includeHTML="static/header-interno.html"></header>
+    <main class="container-fluid main-container" id="producto">
+        <div class="row top-row bg-white bottom-shadow">
+            <div class="col">
+                <h1>Ficha de Producto</h1>
+								<p id="prod-name">Coca-Cola en Lata 355 ml</p>
+								<p><strong>Precio/u: <span aria-label="$50.00">$50<sup>00</sup></span></strong></p>
+            </div>
+        </div>
+        <div class="row row-producto">
+            <div class="col">
+                <div class="prod-container d-flex w-100 h-60 justify-content-center align-items-stretch">
+									<img src="images/productos/coca-cola.png" id="prod-foto" alt="Coca-Cola Lata 355ml">		
+									<div class="badge-promo"></div>		
+								</div>
+            </div>
+        </div>
+				<div class="row w-100 qty-fix bg-red">
+					<div class="col">
+						<div class="d-flex">
+							<div class="flex-fill">
+								<p class="promo-text white-text"><strong>Promoción:</strong> 3x2 Aplicable</p>
+							</div>
+							<div class="flex-fill">
+								<form id="submit-producto" action="#" class="d-flex justify-content-end">
+										<div class="input-group qty-selector bg-white" role="group" aria-label="Selector de cantidades">
+												<span class="input-group-btn">
+														<button type="button" class="btn btn-tiny btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]" aria-label="Restar producto">
+																<i class="fas fa-minus"></i>
+														</button>
+												</span>
+												<span id="cant" class="sr-only">Cantidad</span>
+												<input type="number" name="quant[1]" class="form-control qty-input input-number" aria-labelledby="prod-name" value="1" min="1" max="9" data-name="Coca-Cola en Lata 355 ml" data-price="50" aria-live="assertive">
+												<span class="input-group-btn">
+														<button type="button" class="btn btn-tiny btn-default btn-number" data-type="plus" data-field="quant[1]" aria-label="Sumar producto">
+																<i class="fas fa-plus"></i>
+														</button>
+												</span>
+										</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row w-100 prod-bottom-fix">
+            <div class="col">
+							<div class="total" aria-live="assertive">
+									<div class="txt">
+									Total <span id="promo" class="only-red">En promo</span>
+									</div>
+									<div class="prod-monto">
+											<span>$</span>
+									</div>
+							</div>
+						</div>
+            <div class="col">
+                <button class="btn btn-primary js-add-to-cart w-100 h-100">
+                    Agregar al Carrito
+								</button>
+            </div>
+        </div>
+    </main>
+    <footer class="top-shadow" data-includeHTML="static/footer.html"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/scanapp.js"></script>
+</html>

@@ -1,0 +1,301 @@
+/* Variables */
+:root {
+    --rojo: #E71848;
+    --darkrojo: rgb(143, 13, 43);
+    --negro: #1D1C1C;
+    --blanco: #FFFFFF;
+    --gris: #666666;
+    --grisclaro: #EBEBEB;
+}
+
+
+/* Estilado Global */
+body {
+    font-size: 14px;
+    background-color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: -webkit-calc(var(--vh, 1vh) * 100);
+    height: -moz-calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.cam-content:focus,
+.btn:focus,
+.form-control:focus,
+.btn:not(:disabled):not(.disabled):active:focus,
+*:focus {
+    z-index: 1;
+    outline: 3px dotted var(--negro);
+    outline-offset: 5px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+/* Colores */
+.red {
+    color: var(--rojo);
+    &:hover {
+        color: var(--negro);
+    }
+}
+.only-red {
+    color: var(--darkrojo);
+}
+.gray {
+    color: var(--gris);
+    &:hover {
+        color: var(--negro);
+    }
+}
+.white {
+    color: var(--blanco);
+    &:hover {
+        color: var(--negro);
+    }
+}
+.white-text {
+    color: var(--blanco);
+}
+
+.black {
+    color: var(--negro);
+    &:hover {
+        color: var(--rojo);
+    }
+}
+
+/* Fondos */
+
+.bg-white {
+    background-color: var(--blanco);
+}
+.bg-gray {
+    background-color: var(--gris);
+}
+.bg-black {
+    background-color: var(--negro);
+}
+.bg-red {
+    background-color: var(--rojo);
+}
+
+/* Alturas */
+
+.h-60 {
+    height: 60%;
+}
+
+/* Componentes */
+
+.top-row {
+    min-height: -webkit-calc(var(--vh)* 22);
+    min-height: -moz-calc(var(--vh)* 22);
+    min-height: calc(var(--vh)* 22);
+}
+
+.top-shadow {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 10px;
+}
+.bottom-shadow {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+}
+p {
+    font-size: 1.2em;
+}
+h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.text-decoration {
+    text-decoration: underline;
+}
+.no-text-decoration:hover {
+    text-decoration: none;
+}
+.btn {
+    border-radius: 5px;
+    // min-height: 50px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+.btn-tiny {
+    min-height: 30px;
+}
+.btn-inicio {
+    border-radius: 15px;
+    min-height: 30px;
+    text-transform: uppercase;
+    color: var(--negro);
+    border-color: var(--blanco);
+    background-color: var(--blanco);
+    min-width: 210px;
+    width: auto;
+    &:hover,
+    &:not(:disabled):not(.disabled):active {
+        border-color: var(--rojo);
+        background-color: var(--rojo);
+        color: var(--blanco);
+        .fas {
+            color: var(--negro);
+        }
+    }
+    .fas {
+        color: var(--rojo);
+    }
+}
+.btn-primary {
+    background-color: var(--rojo);
+    border-color: var(--rojo);
+    color: var(--blanco);
+    &:hover,
+    &:not(:disabled):not(.disabled):active {
+        border-color: var(--darkrojo);
+        background-color: var(--darkrojo);
+        color: var(--blanco);
+    }
+}
+
+.a-btn {
+    line-height: 2em;
+}
+
+.a-bottom {
+    line-height: 2em;
+    margin-top: 1.6rem;
+    position: absolute;
+    width: 92%;
+    bottom: 91px;
+    text-transform: capitalize;
+}
+
+.badge {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3em;
+    &.badge-danger {
+        background-color: var(--rojo);
+        color: var(--blanco);
+    }
+}
+
+.notificaciones {
+    .close {
+        color: #4a4a4a;
+        font-size: 30px;
+        font-weight: 300;
+        top: -5px;
+        right: -5px;
+    }
+
+    .alert-notification {
+        color: var(--rojo);
+        background-color: #ffffff;
+        margin-top: 20px;
+        border-radius: 12px;
+        -webkit-box-shadow: 0 4px 8px 1px #d0d0d0;
+                box-shadow: 0 4px 8px 1px #d0d0d0;
+        padding: 40px 50px 30px 25px;
+        border: 0;
+    }
+}
+
+/* Encabezado */
+header {
+    height: 70px;
+    .navbar-brand {
+        margin: 0 auto;
+    }
+    .logo {
+        width: 80px;
+        margin: 5px auto;
+        display: block
+    }
+    .back, .notifications {
+        position: absolute;
+    }
+    .back {
+        left: 15px;
+        padding: 10px;
+        margin-left: -10px;
+    }
+    .notifications {
+        right: 15px;
+        .far {
+            font-size: 1.5em;
+        }
+    }
+}
+
+/* Contenedor */
+.main-container {
+    height: -webkit-calc((var(--vh, 1vh) * 100) - 140px);
+    height: -moz-calc((var(--vh, 1vh) * 100) - 140px);
+    height: calc((var(--vh, 1vh) * 100) - 140px);
+    background-color: var(--grisclaro);
+}
+
+/* Pie */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 10;
+    background-color: var(--blanco);
+    .nav-bar {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            clear: both;
+            font-size: 0.8em;
+            li {
+                display: block;
+                float: left;
+                padding: 15px 10px;
+                text-align: center;
+                width: -webkit-calc(100% / 4);
+                width: -moz-calc(100% / 4);
+                width: calc(100% / 4);
+                height: 70px;
+                a {
+                    display: block;
+                    color: var(--gris);
+                    .badge {
+                        position: absolute;
+                        margin-left: -30px;
+                    }
+                    i {
+                        display: block;
+                        font-size: 1.4em;
+                        margin-bottom: 5px;
+                    }
+                    &:hover {
+                        color: var(--negro);
+                    }
+                }
+                &.active {
+                    a {
+                        color: var(--rojo);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Llamadas a otras hojas de estilos */
+@import "_inicio.scss";
+@import "_comprar.scss";
+@import "_producto.scss";
+@import "_carrito.scss";
+@import "_micompra.scss";
+@import "_perfil.scss";
+@import "_entrega.scss";
+@import "_onboarding.scss";

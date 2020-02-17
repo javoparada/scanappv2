@@ -1,0 +1,85 @@
+/* Mi Compra */
+
+.micompra {
+	.mapa {
+		background: transparent url('../images/mapa.png') center center no-repeat;
+		background-size: cover;
+		width: 110%;
+		height: 150px;
+		margin: 0 -15px 20px -15px
+	}
+	.pasos.rounded-circle {
+	    background-color: white;
+	    width: 30px;
+	    height: 30px;
+	    border: 1px solid #DDDDDD;
+	    padding: 0px;
+	    float: left;
+	}
+	.micompra .pasos.active + p {
+	    font-weight: 800;
+	}
+	.nav-link.active {
+	    border: 0;
+	    border-bottom: 4px solid var(--rojo);
+	    padding-bottom: 14px;
+	    color: #000;
+	}
+
+	.nav-link {
+	    color: #000;
+	    font-weight: 800;
+	}
+
+	.nav-tabs {
+	    margin: 0 -15px 0;
+	    border-bottom: 0;
+	}
+
+	.codigo-container {
+	    margin-top: 20px;
+	    padding-bottom: 180px;
+	}
+
+	.step-entrega {
+	    width: 266px;
+	    margin-left: 25px;
+	    position: relative;
+	}
+
+	.active + p {font-weight: 700;}
+
+	.pasos + p {
+	    margin-left: 34px;
+	    padding-left: 20px;
+	}
+
+	.linea {
+		border-left: 1px solid #DDDDDD;
+		height: 149px;
+		position: absolute;
+		left: 14px;
+		margin-top: 0;
+		z-index: 1;
+		top: 0;
+	}
+
+	.pasos {
+	    z-index: 5;
+	    position: relative;
+	}
+
+	#envio {
+	    padding-bottom: 74px;
+	}
+
+	.horario h4 {
+	    font-size: 20px;
+	    margin-top: 12px;
+	}
+
+	.horario h4 + span {
+	    font-size: 23px;
+	    color: #333;
+	}
+}

@@ -1,0 +1,29 @@
+/* Inicio */
+.inicio {
+    .row {
+        .banner {
+            height: -webkit-calc((100vh - 280px) / 3);
+            height: -moz-calc((100vh - 280px) / 3);
+            height: calc((100vh - 280px) / 3);
+            border-radius: 25px;
+            background-color: var(--gris);
+            color: var(--blanco);
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 15px;
+        }
+        .btn-inicio {
+            position: absolute;
+            bottom: 15px;
+            left: 30px;
+            line-height: 30px;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    #comprar .btn-primary {
+        line-height: 2.3em;
+    }
+}
