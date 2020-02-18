@@ -26,7 +26,6 @@ body {
 .form-control:focus,
 .btn:not(:disabled):not(.disabled):active:focus,
 *:focus {
-    z-index: 1;
     outline: 3px dotted var(--negro);
     outline-offset: 5px;
     -webkit-box-shadow: none;
@@ -45,7 +44,7 @@ button:disabled {
     }
 }
 .only-red {
-    color: var(--darkrojo);
+    color: var(--rojo);
 }
 .gray {
     color: var(--gris);
@@ -157,8 +156,8 @@ h1 {
     color: var(--blanco);
     &:hover,
     &:not(:disabled):not(.disabled):active {
-        border-color: var(--darkrojo);
-        background-color: var(--darkrojo);
+        border-color: var(--rojo);
+        background-color: var(--rojo);
         color: var(--blanco);
     }
 }
@@ -238,7 +237,7 @@ header {
     height: -webkit-calc((var(--vh, 1vh) * 100) - 140px);
     height: -moz-calc((var(--vh, 1vh) * 100) - 140px);
     height: calc((var(--vh, 1vh) * 100) - 140px);
-    background-color: var(--grisclaro);
+    background-color: var(--blanco);
 }
 
 /* Pie */
@@ -288,6 +287,10 @@ footer {
             }
         }
     }
+    + div {
+        visibility: hidden;
+        opacity: 0;
+    } 
 }
 
 /* Llamadas a otras hojas de estilos */

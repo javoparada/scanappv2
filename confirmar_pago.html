@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ScanApp - Confirmar Pago</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/scanapp.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/all.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
+
 <body class="entrega confirmar_pago">
     <header class="navbar" data-includeHTML="static/header-interno.html"></header>
     <main class="container-fluid main-container">
         <div class="row bg-white">
             <div class="col">
                 <h1>Confirmar Pago</h1>
-
                 <div class="row text-center" id="pasos" aria-hidden="true">
                     <div class="col-4">
                         <div class="pasos rounded-circle">
-                            <div class="rounded-circle"></div>
                         </div>
                         <h2>Entrega</h2>
                     </div>
                     <div class="col">
                         <div class="pasos rounded-circle active">
-                            <div class="rounded-circle"></div>
                         </div>
                         <h2>Pago</h2>
                     </div>
                     <div class="col">
                         <div class="pasos rounded-circle">
-                            <div class="rounded-circle"></div>
                         </div>
                         <h2>Código QR</h2>
                     </div>
                     <div class="linea"></div>
                 </div>
-                
             </div>
         </div>
         <div>
@@ -71,7 +71,7 @@
                             <span class="payment-icon">
                                 <i class="far fa-credit-card" aria-hidden="true"></i>
                             </span>
-                        </div>                        
+                        </div>
                         <div class="col">
                             <div class="card-body">
                                 <h3 class="card-title">Método de pago</h3>
@@ -117,8 +117,15 @@
             <div class="row">
                 <div class="col">
                     <h4 class="text-uppercase">Precio Final</h4>
-                    <span class="font-weight-bold precio_final" aria-label="$307.45">$307<sup>45</sup></span>
-                    <span class="ahorro red">¡Ahorraste: <span class="precio" aria-label="$45.89">$45<sup>89</sup></span></span>!
+                    <span class="font-weight-bold precio_final" aria-label="$100.00" aria-atomic="true"
+                        role="text">$100<sup>00</sup></span>
+                    <span class="ahorro red">
+                        ¡Ahorraste:
+                        <span class="precio" aria-label="$50.00" aria-atomic="true" role="text">
+                            $50<sup>00</sup>
+                        </span>
+                        !
+                    </span>
                 </div>
                 <div class="col align-self-center">
                     <a href="micompra.html" class="btn btn-primary a-btn w-100" role="button">Confirmar</a>
@@ -126,10 +133,13 @@
             </div>
         </div>
     </div>
-    <footer class="top-shadow"data-includeHTML="static/footer.html"></footer>
+    <footer class="top-shadow" data-includeHTML="static/footer.html"></footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 <script src="js/scanapp.js"></script>
+
 </html>
