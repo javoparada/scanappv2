@@ -3,8 +3,9 @@
     --rojo: #E71848;
     --darkrojo: rgb(143, 13, 43);
     --negro: #1D1C1C;
-    --blanco: #FFFFFF;
-    --gris: #666666;
+    --blanco: #FFF;
+    --gris: #666;
+    --grisoscuro: #333;
     --grisclaro: #EBEBEB;
 }
 
@@ -16,9 +17,11 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-    height: -webkit-calc(var(--vh, 1vh) * 100);
-    height: -moz-calc(var(--vh, 1vh) * 100);
     height: calc(var(--vh, 1vh) * 100);
+    > div {
+        visibility: hidden;
+        opacity: 0;
+    } 
 }
 
 .cam-content:focus,
@@ -28,8 +31,7 @@ body {
 *:focus {
     outline: 3px dotted var(--negro);
     outline-offset: 5px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
 button:disabled {
@@ -93,18 +95,14 @@ button:disabled {
 /* Componentes */
 
 .top-row {
-    min-height: -webkit-calc(var(--vh)* 22);
-    min-height: -moz-calc(var(--vh)* 22);
     min-height: calc(var(--vh)* 22);
 }
 
 .top-shadow {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 10px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 10px;
 }
 .bottom-shadow {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
 }
 p {
     font-size: 1.2em;
@@ -198,8 +196,7 @@ h1 {
         background-color: #ffffff;
         margin-top: 20px;
         border-radius: 12px;
-        -webkit-box-shadow: 0 4px 8px 1px #d0d0d0;
-                box-shadow: 0 4px 8px 1px #d0d0d0;
+        box-shadow: 0 4px 8px 1px #d0d0d0;
         padding: 40px 50px 30px 25px;
         border: 0;
     }
@@ -234,8 +231,6 @@ header {
 
 /* Contenedor */
 .main-container {
-    height: -webkit-calc((var(--vh, 1vh) * 100) - 140px);
-    height: -moz-calc((var(--vh, 1vh) * 100) - 140px);
     height: calc((var(--vh, 1vh) * 100) - 140px);
     background-color: var(--blanco);
 }
@@ -259,8 +254,6 @@ footer {
                 float: left;
                 padding: 15px 10px;
                 text-align: center;
-                width: -webkit-calc(100% / 4);
-                width: -moz-calc(100% / 4);
                 width: calc(100% / 4);
                 height: 70px;
                 a {
@@ -287,10 +280,6 @@ footer {
             }
         }
     }
-    + div {
-        visibility: hidden;
-        opacity: 0;
-    } 
 }
 
 /* Llamadas a otras hojas de estilos */

@@ -1,7 +1,5 @@
 /* Comprar */
 .row-producto {
-    height: -webkit-calc(var(--vh, 1vh) * 51);
-    height: -moz-calc(var(--vh, 1vh) * 51);
     height: calc(var(--vh, 1vh) * 51);
     margin-top: 1em;
     margin-bottom: 1em;
@@ -14,8 +12,6 @@
     }
     .cam-content {
         -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
         transition: all 0.5s ease;
         background-size: cover;
         opacity: 0.8;
@@ -23,7 +19,7 @@
             opacity: 1;
         }
         &.prod1 {
-            background-image: url('../images/producto1.png');
+            background-image: url('../images/producto1.jpg');
         }
         .prod-process {
             color: var(--white);

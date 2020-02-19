@@ -17,24 +17,41 @@
 
 <body class="onboarding">
     <header class="navbar" data-includeHTML="static/header.html"></header>
-    <a href="accesibilidad.html" class="sr-only">Aplicación accesible</a>
-    <div class="container-fluid">
-        <div class="onb_content">
-            <div class="img_on img_1"></div>
+    <main class="container-fluid">
+        <div class="content text-center">
+            <img src="images/s_1.png" alt="" class="rounded">
             <h2>¡Bienvenido a ScanApp!</h2>
             <p>¡Hacer tu compra ahora es mucho más fácil!</p>
-            <a href="onboarding_2.html"><span class="sr-only">Siguiente</span></a>
+            <ol>
+                <li>
+                    <a href="index.html" title="Primer paso" aria-current="step">
+                        <i class="fas fa-circle" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="onboarding_2.html" title="Segundo paso">
+                        <i class="fas fa-circle" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="onboarding_3.html" title="Tercer paso">
+                        <i class="fas fa-circle" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ol>
+            <a href="onboarding_2.html" class="btn btn-primary btn-bottom-fix">Siguiente</a>
+            <p class="skip">
+                <a href="inicio.html" class="black">Saltear introducción</a>
+            </p>
         </div>
-    </div>
-    <p class="text-center skip">
-        <a href="inicio.html" class="black">Saltear introducción</a>
-    </p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/scanapp.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-<script src="js/scanapp.js"></script>
 
 </html>

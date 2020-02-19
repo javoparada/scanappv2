@@ -1,6 +1,6 @@
 /* Entrega */
 
-.rounded-circle {
+.pasos {
     background-color: white;
     width: 30px;
     height: 30px;
@@ -9,12 +9,11 @@
     padding: 0px;
 }
 
-.rounded-circle.active {
-    border: 1px solid var(--rojo);
-    position: relative;
+.pasos.active {
+    border-color:var(--rojo);
 }
 
-.rounded-circle.active::after {
+.pasos.active::after {
     content: '';
     position: absolute;
     width: 16px;
@@ -34,7 +33,7 @@
         font-size: 1em;
         margin-top: 7px;
         color: #000;
-        opacity: 0.5;
+        opacity: 0.6;
     }
 
     .active + h2 {

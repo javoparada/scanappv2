@@ -221,8 +221,7 @@
 				var cart = this._toJSONObject(this.storage.getItem(this.cartName));
 				var items = cart.items;
 
-				$(document).on("click", ".pdelete a", function (e) {
-					e.preventDefault();
+				$(document).on("click", ".pdelete", function (e) {
 					var productName = $(this).data("product");
 					var newItems = [];
 					for (var i = 0; i < items.length; ++i) {
@@ -241,6 +240,7 @@
 					if (newItems.length == 0) {
 						updatedTotal = 0;
 						totalQty = 0;
+						$('#cart-content').html("<p>No hay productos en el carrito</p>");
 					} else {
 						for (var j = 0; j < newItems.length; ++j) {
 							var prod = newItems[j];
@@ -281,7 +281,7 @@
 
 						var html = '<div class="cart-block" role"=group" aria-labelledby="nombre-prod" aria-describedby="cant-prod"><div class="row"><div class="col-4"><img src="' + img + '" alt="" class="cart-img" /></div>';
 						html += '<div class="col-8"><p class="pname" id="nombre-prod">' + product + '</p><p class="pprice only-red"> $ ' + price + '</p>';
-						html += '<div class="input-group qty-selector bg-white pqty"> <span class="input-group-btn"> <button type="button" class="btn btn-tiny btn-default btn-number" data-type="minus" data-field="quant[' + i + ']" aria-label="Restar producto"> <i class="fas fa-minus"></i> </button> </span> <input type="number" id="cant-prod" name="quant[' + i + ']" class="form-control qty-input qty input-number" aria-labelledby="cant-prod" value="' + qty + '" min="1" max="9" data-name="' + product + '" data-price="' + price + '" aria-live="polite"> <span class="input-group-btn"> <button type="button" class="btn btn-tiny btn-default btn-number" data-type="plus" data-field="quant[' + i + ']" aria-label="Sumar producto"> <i class="fas fa-plus"></i> </button> </span></div><span class="pdelete"><a href="#" aria-label="Quitar producto" data-product="' + product + '">&times;</a></span>';
+						html += '<div class="input-group qty-selector bg-white pqty"> <span class="input-group-btn"> <button type="button" class="btn btn-tiny btn-default btn-number" data-type="minus" data-field="quant[' + i + ']" aria-label="Restar producto"> <i class="fas fa-minus"></i> </button> </span> <input type="number" id="cant-prod" name="quant[' + i + ']" class="form-control qty-input qty input-number" aria-labelledby="cant-prod" value="' + qty + '" min="1" max="9" data-name="' + product + '" data-price="' + price + '" aria-live="polite"> <span class="input-group-btn"> <button type="button" class="btn btn-tiny btn-default btn-number" data-type="plus" data-field="quant[' + i + ']" aria-label="Sumar producto"> <i class="fas fa-plus"></i> </button> </span></div><button class="pdelete" aria-label="Quitar ' + product + '" data-product="' + product + '"><i class="fal fa-2x fa-times" aria-hidden="true"></i></button>';
 						html += '</div></div></div>';
 
 						$tableCart.html($tableCart.html() + html);

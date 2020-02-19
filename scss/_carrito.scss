@@ -12,16 +12,15 @@
 	    background-color: #fff;
 	    margin-top: 20px;
 	    padding: 10px;
-	    -webkit-box-shadow: 0 3px 8px 2px #c7c7c7;
-	            box-shadow: 0 3px 8px 2px #c7c7c7;
+	    box-shadow: 0 3px 8px 2px #c7c7c7;
 	}
 
 	.qty-selector {
-	    background-color: #EBEBEB !important;
+	    background-color: var(--grisclaro) !important;
 	}
 
 	.qty.input-number {
-	    background-color: #EBEBEB;
+	    background-color: var(--grisclaro);
 	    color: #222;
 	}
 
@@ -39,23 +38,24 @@
 	}
 
 	.pdelete {
-	    position: absolute;
-	    right: 20px;
-	    top: -20px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 44px;
+    width: 44px;
+		padding: 0;
+		margin: 0;
+    color: #9c9c9c;
+    border: none;
+    background-color: transparent;
+		&:hover {
+			color: var(--negro);
+			text-decoration: none;
+		}
 	}
 
 	.cart-block {
 	    position: relative;
-	}
-
-	.pdelete a {
-	    color: #9c9c9c;
-	    font-size: 3em;
-			font-weight: 200;
-			&:hover {
-				color: black;
-				text-decoration: none;
-			}
 	}
 
 	#cart-content .pprice {
@@ -64,11 +64,9 @@
 
 	.cart-block img {
 	    display: block;
-	    background-color: #EBEBEB;
+	    background-color: var(--grisclaro);
 	    padding: 8px 11px;
-	    -webkit-box-sizing: border-box;
-	       -moz-box-sizing: border-box;
-	            box-sizing: border-box;
+	    box-sizing: border-box;
 	    height: 137px;
 	}
 }
