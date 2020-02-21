@@ -29,6 +29,7 @@ body {
 .form-control:focus,
 .btn:not(:disabled):not(.disabled):active:focus,
 *:focus {
+    z-index: 1;
     outline: 3px dotted var(--negro);
     outline-offset: 5px;
     box-shadow: none;
