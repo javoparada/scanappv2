@@ -13,7 +13,7 @@
 /* Estilado Global */
 body {
     font-size: 14px;
-    background-color: #FFF;
+    background-color: var(--blanco);
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
@@ -185,7 +185,7 @@ h1 {
 
 .notificaciones {
     .close {
-        color: #4a4a4a;
+        color: var(--grisoscuro);
         font-size: 30px;
         font-weight: 300;
         top: -5px;
@@ -194,7 +194,7 @@ h1 {
 
     .alert-notification {
         color: var(--rojo);
-        background-color: #ffffff;
+        background-color: var(--blanco);
         margin-top: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 8px 1px #d0d0d0;

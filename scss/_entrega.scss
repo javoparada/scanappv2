@@ -55,8 +55,7 @@
     }
 
     .row.bg-white {
-        -webkit-box-shadow: 0 5px 5px #f0eeee;
-                box-shadow: 0 5px 5px #f0eeee;
+        box-shadow: 0 5px 5px #f0eeee;
     }
 
     a { 
@@ -76,19 +75,10 @@
             }     
             .col-2, .col-1 {
                 display: -webkit-box;
-                display: -webkit-flex;
-                display: -moz-box;
-                display: -ms-flexbox;
                 display: flex;
                 -webkit-box-align: center;
-                -webkit-align-items: center;
-                   -moz-box-align: center;
-                    -ms-flex-align: center;
                         align-items: center;
                 -webkit-box-pack: center;
-                -webkit-justify-content: center;
-                   -moz-box-pack: center;
-                    -ms-flex-pack: center;
                         justify-content: center;
 
                 .gray {
@@ -160,7 +150,7 @@
     }
 
     .main-container {
-        background-color: #fff;
+        background-color: var(--blanco);
     }
 
     .form-control {
@@ -188,8 +178,10 @@
 .confirmar_pago, .micompra {
     .pre-footer {
         position: absolute;
-        bottom: 71px;
-        background-color: #fff;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--blanco);
         width: 100%;
         padding: 10px 0;
 
