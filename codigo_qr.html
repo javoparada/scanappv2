@@ -21,23 +21,22 @@
         <div class="row bg-white">
             <div class="col">
                 <h1>Código Qr</h1>
-                <div class="row text-center" id="pasos" aria-hidden="true">
-                    <div class="col-4">
-                        <div class="pasos rounded-circle">
-                        </div>
-                        <h2>Entrega</h2>
-                    </div>
-                    <div class="col">
-                        <div class="pasos rounded-circle">
-                        </div>
-                        <h2>Pago</h2>
-                    </div>
-                    <div class="col">
-                        <div class="pasos rounded-circle active">
-                        </div>
-                        <h2>Código QR</h2>
-                    </div>
+                <div id="pasos">
                     <div class="linea"></div>
+                    <ol class="row text-center p-0">
+                        <li class="col d-inline-block">
+                            <div class="pasos rounded-circle"></div>
+                            <span aria-label="Primer paso: Entrega" role="text">Entrega</span>
+                        </li>
+                        <li class="col d-inline-block">
+                            <div class="pasos rounded-circle"></div>
+                            <span aria-label="Segundo paso: Pago" role="text">Pago</span>
+                        </li>
+                        <li class="col d-inline-block">
+                            <div class="pasos rounded-circle active"></div>
+                            <span aria-label="Tercer paso: Código QR" role="text" aria-current="step">Código QR</span>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>

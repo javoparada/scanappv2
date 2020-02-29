@@ -21,48 +21,46 @@
         <div class="row bg-white">
             <div class="col">
                 <h1>Método de Pago</h1>
-                <div class="row text-center" id="pasos" aria-hidden="true">
-                    <div class="col-4">
-                        <div class="pasos rounded-circle">
-                        </div>
-                        <h2>Entrega</h2>
-                    </div>
-                    <div class="col">
-                        <div class="pasos rounded-circle active">
-                        </div>
-                        <h2>Pago</h2>
-                    </div>
-                    <div class="col">
-                        <div class="pasos rounded-circle">
-                        </div>
-                        <h2>Código QR</h2>
-                    </div>
+                <div id="pasos">
                     <div class="linea"></div>
+                    <ol class="row text-center p-0">
+                        <li class="col d-inline-block">
+                            <div class="pasos rounded-circle"></div>
+                            <span aria-label="Primer paso: Entrega" role="text">Entrega</span>
+                        </li>
+                        <li class="col d-inline-block">
+                            <div class="pasos rounded-circle active"></div>
+                            <span aria-label="Segundo paso: Pago" role="text" aria-current="step">Pago</span>
+                        </li>
+                        <li class="col d-inline-block">
+                            <div class="pasos rounded-circle"></div>
+                            <span aria-label="Tercer paso: Código QR" role="text">Código QR</span>
+                        </li>
+                    </ol>
                 </div>
             </div>
-        </div>
-        <form action="confirmar_pago.html">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="n_tarjeta">Número de Tarjeta</label>
-                <input type="number" class="form-control" id="n_tarjeta" required>
-            </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col">
-                        <label for="caducidad">Caducidad</label>
-                        <input type="text" class="form-control" id="caducidad" required>
-                    </div>
-                    <div class="col">
-                        <label for="cvv">CVV</label>
-                        <input type="number" class="form-control" id="cvv" required>
-                    </div>
+            <form action="confirmar_pago.html">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
                 </div>
-            </div> <button type="submit" class="btn btn-primary">Guardar</button>
-        </form>
+                <div class="form-group">
+                    <label for="n_tarjeta">Número de Tarjeta</label>
+                    <input type="number" class="form-control" id="n_tarjeta" required>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label for="caducidad">Caducidad</label>
+                            <input type="text" class="form-control" id="caducidad" required>
+                        </div>
+                        <div class="col">
+                            <label for="cvv">CVV</label>
+                            <input type="number" class="form-control" id="cvv" required>
+                        </div>
+                    </div>
+                </div> <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
     </main>
     <footer class="top-shadow" data-includeHTML="static/footer.html"></footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"

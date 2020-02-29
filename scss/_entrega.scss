@@ -1,51 +1,64 @@
 /* Entrega */
 
 .pasos {
-    background-color: white;
+    background-color: var(--blanco);
     width: 30px;
     height: 30px;
     margin: 0 auto;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--grispasos);
     padding: 0px;
-}
-
-.pasos.active {
-    border-color:var(--rojo);
-}
-
-.pasos.active::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-color: var(--rojo);
-    border: 1px solid var(--rojo);
-    margin: 6px;
-    display: block;
-    border-radius: 50%;
-}
-
-#pasos {
-    margin-top: 12px;
-    margin-bottom: 3px;
-
-    h2 {
+    &.active,
+    &.completed {
+        
+        span {
+            opacity: 1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--rojo);
+            border: 1px solid var(--rojo);
+            margin: 6px;
+            display: block;
+            border-radius: 50%;
+        }
+    }
+    &.active {
+        border-color:var(--rojo);
+        &::after {
+            background-color: var(--rojo);
+            border: 1px solid var(--rojo);
+        }
+    }
+    &.completed {
+        &::after {
+            background-color: var(--grispasos);
+            border: 1px solid var(--grispasos);
+        }
+    }
+    
+    span {
         font-size: 1em;
         margin-top: 7px;
         color: #000;
         opacity: 0.6;
     }
+}
 
-    .active + h2 {
-        color: #000;
-        opacity: 1;
-    }
-
+#pasos {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 0;
+    position: relative;
     .linea {
         border: 1px solid #DDDDDD;
-        height: 1px;
-        width: 68%;
-        margin: -46px auto 0;
+        height: 2px;
+        position: absolute;
+        left: 16%;
+        right: 16%;
+        top: 25%;
     }
 }
 

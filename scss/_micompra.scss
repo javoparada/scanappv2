@@ -39,11 +39,6 @@
 
 	.active + p {font-weight: 700;}
 
-	.pasos + p {
-	    margin-left: 34px;
-	    padding-left: 20px;
-	}
-
 	.linea {
 		border-left: 1px solid #DDDDDD;
 		height: 149px;
@@ -56,7 +51,11 @@
 
 	.pasos {
 	    z-index: 2;
-	    position: relative;
+			position: relative;
+			+ p {
+				margin-left: 34px;
+				padding-left: 20px;
+		}
 	}
 
 	#envio {
