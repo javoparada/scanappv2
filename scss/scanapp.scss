@@ -20,7 +20,6 @@ body {
     height: calc(var(--vh, 1vh) * 100);
     > div { // fix for hiding free hosting ad
         visibility: hidden;
-        opacity: 0;
     } 
 }
 .cam-content:focus,
@@ -33,9 +32,46 @@ body {
     outline-offset: 5px;
     box-shadow: none;
 }
-
+header a:hover,
+footer a:hover {
+    zoom: 1.1;
+}
+a {
+    -webkit-transition: zoom 1s;
+    transition: zoom 1s;
+}
 button:disabled {
     cursor: not-allowed;
+}
+.skiplist {margin: 0; padding: 0} 
+.skip {
+    display: none;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+:root .skip, /*Seen by Moz, FF and Safari*/
+.skip /*Seen by IE*/ {
+    display: block; 
+} 
+.skip a {
+    padding: 0 0.5em;
+    display: inline-block;
+    z-index: 2;
+    text-decoration:none;
+    position: absolute;
+    border: solid #333 2px;
+    color: #fff;
+    background: #555;
+    width: 250px;
+    left: -200em;
+}
+.skip a:focus,
+.skip a:active {
+    left: 15px;
+    top: 15px
+}
+.skip a:hover {
+    cursor: default
 }
 
 /* Colores */

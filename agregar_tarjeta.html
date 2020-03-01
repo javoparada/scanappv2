@@ -17,13 +17,13 @@
 
 <body class="entrega agregar_tarjeta">
     <header class="navbar" data-includeHTML="static/header-interno.html"></header>
-    <main class="container-fluid main-container">
+    <main class="container-fluid main-container" id="principal">
         <form action="confirmar_pago.html">
             <div class="row bg-white">
                 <div class="col-12">
                     <h1>Método de Pago</h1>
                     <div id="pasos">
-                        <div class="linea"></div>
+                        <div class="linea" aria-hidden="true"></div>
                         <ol class="row text-center p-0">
                             <li class="col d-inline-block">
                                 <div class="pasos rounded-circle completed"></div>
@@ -64,7 +64,7 @@
             <button type="submit" class="btn btn-primary btn-agregar-tarjeta">Guardar</button>
         </form>
     </main>
-    <footer class="top-shadow" data-includeHTML="static/footer.html"></footer>
+    <footer id="footer" class="top-shadow" data-includeHTML="static/footer.html"></footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

@@ -26,9 +26,9 @@
 			this.storage = sessionStorage; // shortcut al objeto de sessionStorage
 
 
-			this.$formAddToCart = this.$element.find("#producto"); // Página que agrega items al carrito
+			this.$formAddToCart = this.$element.find("main.producto"); // Página que agrega items al carrito
 			this.$formCart = this.$element.find("main"); // Main
-			this.$checkoutCart = this.$element.find("#carrito"); // Página del carrito
+			this.$checkoutCart = this.$element.find("main.carrito"); // Página del carrito
 
 			this.currency = "$"; // Moneda para HTML
 
@@ -297,7 +297,7 @@
 		updateCart: function () {
 			var self = this;
 
-			$("#carrito").on("change", ".qty", function (event) {
+			$("main.carrito").on("change", ".qty", function (event) {
 				var $blocks = self.$formCart.find(".cart-block");
 
 				var updatedTotal = 0;

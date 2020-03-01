@@ -17,16 +17,16 @@
 
 <body class="entrega micompra">
     <header class="navbar" data-includeHTML="static/header-interno.html"></header>
-    <main class="container-fluid main-container">
+    <main class="container-fluid main-container" id="principal">
         <div class="row bg-white">
             <div class="col">
                 <h1>Mi compra</h1>
                 <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
-                    <li class="nav-item">
+                    <li class="nav-item" role="tab">
                         <a class="nav-link active" id="qr-tab" data-toggle="tab" href="#qr" role="tab"
                             aria-controls="qr" aria-selected="true">Código Qr</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" role="tab">
                         <a class="nav-link" id="envio-tab" data-toggle="tab" href="#envio" role="tab"
                             aria-controls="envio" aria-selected="false">Estado de Envío</a>
                     </li>
@@ -40,24 +40,26 @@
                             <a href="#" class="black text-decoration">Ver Ticket de Compra</a>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="envio" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="tab-pane fade" id="envio" role="tabpanel" aria-labelledby="envio-tab">
                         <div class="mapa" aria-label="Su pedido esta en camino a 2 kilometros"></div>
                         <div class="step-entrega">
-                            <ul class="list-unstyled">
+                            <div class="linea" aria-hidden="true"></div>
+                            <ol class="list-unstyled">
                                 <li>
-                                    <span class="pasos rounded-circle"></span>
-                                    <p>Estamos Preparando tu Compra.</p>
+                                    <span class="pasos rounded-circle completed"></span>
+                                    <p aria-label="Primer paso: Estamos preparando tu compra" role="text">Estamos
+                                        Preparando tu Compra.</p>
                                 </li>
-                                <li aria-current="step">
+                                <li>
                                     <span class="pasos rounded-circle active"></span>
-                                    <p>¡Tu Compra está en Camino!</p>
+                                    <p aria-label="Segundo paso: ¡Tu compra está en camino!" role="text"
+                                        aria-current="step">¡Tu Compra está en Camino!</p>
                                 </li>
                                 <li>
                                     <span class="pasos rounded-circle"></span>
-                                    <p>Compra Recibida.</p>
+                                    <p aria-label="Tercer paso: Compra recibida" role="text">Compra Recibida.</p>
                                 </li>
-                                <div class="linea"></div>
-                            </ul>
+                            </ol>
                         </div>
                         <div class="container-fluid">
                             <div class="row">
@@ -73,7 +75,7 @@
             </div>
         </div>
     </main>
-    <footer class="top-shadow" data-includeHTML="static/footer.html"></footer>
+    <footer id="footer" class="top-shadow" data-includeHTML="static/footer.html"></footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

@@ -17,7 +17,7 @@
 
 <body class="accesibilidad">
     <header class="navbar" data-includeHTML="static/header-interno.html"></header>
-    <main class="container-fluid main-container">
+    <main class="container-fluid main-container" id="principal">
         <div class="row bg-white">
             <div class="col">
                 <h1>Declaración de Accesibilidad</h1>
@@ -28,11 +28,12 @@
                     </p>
                     <p>
                         Se han seguido las Pautas de Accesibilidad al Contenido Web 2.1 (Web Content Accessibility
-                        Guidelines 2.1) para garantizar la accesibilidad de nuestra plataforma. Algunos de los aspectos
-                        que se han tenido en cuenta son:</p>
+                        Guidelines 2.1) para garantizar la accesibilidad de nuestra plataforma de nivel AA. Algunos de
+                        los aspectos que se han tenido en cuenta son:</p>
                     <ul>
                         <li>Separar el contenido de la presentación mediante el uso de hojas de estilo (CSS).</li>
                         <li>Estructurar y etiquetar correctamente el contenido de las páginas.</li>
+                        <li>Desarrollar JavaScript para actualizar secciones interactivas del sitio en tiempo real.</li>
                         <li>Utilizar etiquetas como <code>&lt;ol&gt;</code> y <code>&lt;p&gt;</code> conforme a su
                             significado
                             semántico y nunca para formatear el texto.</li>
@@ -55,7 +56,7 @@
             </div>
         </div>
     </main>
-    <footer class="top-shadow" data-includeHTML="static/footer.html"></footer>
+    <footer id="footer" class="top-shadow" data-includeHTML="static/footer.html"></footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
