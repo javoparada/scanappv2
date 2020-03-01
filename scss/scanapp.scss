@@ -1,7 +1,7 @@
 /* Variables */
 :root {
     --rojo: #E71848;
-    --darkrojo: rgb(143, 13, 43);
+    --rojoscuro: rgb(143, 13, 43);
     --negro: #1D1C1C;
     --blanco: #FFF;
     --gris: #666;
@@ -9,7 +9,6 @@
     --grispasos: #DDD;
     --grisclaro: #EBEBEB;
 }
-
 
 /* Estilado Global */
 body {
@@ -19,12 +18,11 @@ body {
     overflow: hidden;
     height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
-    > div {
+    > div { // fix for hiding free hosting ad
         visibility: hidden;
         opacity: 0;
     } 
 }
-
 .cam-content:focus,
 .btn:focus,
 .form-control:focus,
@@ -156,8 +154,8 @@ h1 {
     color: var(--blanco);
     &:hover,
     &:not(:disabled):not(.disabled):active {
-        border-color: var(--rojo);
-        background-color: var(--rojo);
+        border-color: var(--rojoscuro);
+        background-color: var(--rojoscuro);
         color: var(--blanco);
     }
 }
